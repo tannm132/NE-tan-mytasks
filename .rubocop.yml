@@ -4,3 +4,6 @@ AllCops:
   Exclude:
     - 'config/environments/**/*'
     - 'bin/**/*'
+
+Style/Documentation:
+  Enabled: false
