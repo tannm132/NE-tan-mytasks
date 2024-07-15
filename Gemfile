@@ -63,6 +63,7 @@ group :development do
   # gem "spring"
 
   gem 'brakeman', require: false
+  gem 'factory_bot_rails'
   gem 'rubocop-rails', require: false
 end
 
