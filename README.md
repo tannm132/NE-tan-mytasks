@@ -1,24 +1,45 @@
-# README
+# myTasks
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple task management application built with Ruby on Rails.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+1. Clone the repository:
+    ```sh
+    git clone git@github.com:tannm132/NE-tan-mytasks.git
+    cd NE-tan-mytasks
+    ```
 
-* System dependencies
+2. Check your Ruby version:
+    ```sh
+    ruby -v
+    ```
+    The output should start with something like `ruby 3.3.4`. If not, install the correct Ruby version using rbenv.
 
-* Configuration
+3. Install dependencies:
+    ```sh
+    bundle install
+    yarn install
+    ```
 
-* Database creation
+4. Set up the database:
+    ```sh
+    rails db:create
+    rails db:migrate
+    rails db:seed
+    ```
 
-* Database initialization
+## Usage
 
-* How to run the test suite
+To start the Rails server:
+```sh
+rails server
+```
+Visit http://localhost:3000 in your browser.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Testing
 
-* Deployment instructions
-
-* ...
+Run the test suite:
+```sh
+bundle exec rspec
+```
