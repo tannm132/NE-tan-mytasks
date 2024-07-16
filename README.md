@@ -2,6 +2,12 @@
 
 A simple task management application built with Ruby on Rails.
 
+## Screenshots
+
+|Desktop|Mobile|
+|---|---|
+|<img width="1440" alt="Screenshot 2024-07-17 at 00 48 07" src="https://github.com/user-attachments/assets/3ae868a5-ddf8-41e2-b378-7defc7f751f9">|<img width="345" alt="Screenshot 2024-07-17 at 00 49 44" src="https://github.com/user-attachments/assets/87e29b5e-afce-4339-ba77-69260f70a7ad">|
+
 ## Installation
 
 1. Clone the repository:
