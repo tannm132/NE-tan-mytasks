@@ -5,7 +5,7 @@ export default class extends Controller {
     e.target.disabled = true
 
     const id = e.target.dataset.id
-    const csrfToken = document.querySelector("[name='csrf-token']").content
+    const csrfToken = document.querySelector("[name='csrf-token']")?.content
 
     fetch(`/tasks/${id}/complete`, {
       method: 'POST',

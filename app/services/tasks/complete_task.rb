@@ -4,20 +4,26 @@ module Tasks
   class CompleteTask < ApplicationService
     def initialize(task)
       @task = task
+      @result = Result.new(
+        succeed: false,
+        object: @task,
+        errors: @task.errors
+      )
     end
 
     def run
-      # TODO: define the result struct in base service
-      result_struct = Struct.new(:succeed, :object, :errors)
+      if @task.done?
+        @result.errors.add(:base, 'Task is already completed.')
+        return @result
+      end
 
       @task.status = :done
       @task.save
 
-      result_struct.new(
-        succeed: @task.valid?,
-        object: @task,
-        errors: @task.errors
-      )
+      @result.succeed = @task.valid?
+      @result.errors.merge!(@task.errors)
+
+      @result
     end
   end
 end
