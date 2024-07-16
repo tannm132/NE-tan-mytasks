@@ -3,7 +3,7 @@
 module Tasks
   class ListTasks < ApplicationService
     def run
-      Task.order(due_at: :asc, priority: :desc).to_a
+      Task.active.order(due_at: :asc, priority: :desc).to_a
     end
   end
 end
